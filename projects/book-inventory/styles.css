@@ -1,0 +1,74 @@
+/* Row Backgrounds */
+
+* {
+  text-align: center;
+  font-family: monospace;
+  font-size: large;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(rgb(0,100,150), rgb(0,142,142), rgb(0,50,255));
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(coral, pink, rgb(180,0,0));
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(rgb(125,25,0), yellow, green);
+}
+
+/* All spans inline */
+span {
+  display: inline-block;
+}
+
+/* Status Styling Per Row */
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(cyan, blue);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(pink, white, cyan);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(pink, white, cyan);
+}
+
+/* Shared status + rate sizing */
+span[class="status"],
+span[class^="rate"] {
+  height: 40px;
+  width: 55px;
+  padding: 5px;
+}
+
+/* Rating Boxes */
+span[class^="rate"] > span {
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: yellow;
+}
+
+/* One Rating */
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(red, yellow, green);
+}
+
+/* Two Rating */
+span[class~="two"] > span:first-child,
+span[class~="two"] > span:nth-child(2) {
+  background-image: linear-gradient(red, yellow, green);
+}
+
+/* Three Rating */
+span[class~="three"] > span {
+  background-image: linear-gradient(red, yellow, green);
+}

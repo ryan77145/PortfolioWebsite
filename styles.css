@@ -1,0 +1,544 @@
+:root {
+  --main-color: #5f5f5f;
+  --secondary-color: #22d1f0;
+  --accent-color: #8b8989;
+  --button-color: #3b3b4f;
+  --text-color: white;
+  --secondary-text-color: white;
+}
+
+*:not(.notmono) {
+  font-family: Monospace;
+  line-height: 2.5rem;
+}
+
+/*.homeimg {
+  background-image: ;
+}*/
+
+hr {
+  background-color: var(--secondary-color);
+  max-width: 80%;
+  height: 2px;
+}
+
+h1:not(.article) {
+  text-align: center;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.socialIcons {
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  fill: var(--secondary-color);
+}
+
+.centered {
+  text-align: center;
+  
+}
+
+/* Links */ 
+.navlinks {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+a:link:not(.policy) {
+    color: var(--text-color);
+}
+
+a:visited:not(.policy) {
+  color: rgb(201, 201, 201);
+}
+
+a:hover, a:focus {
+  transition: background-color 0.1s ease-in;
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+
+.socialLinks:hover {
+  transition: background-color 0.1s ease-in;
+  background-color: var(--text-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+
+.socialLinks, .cards > a, .articleCards > a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navlinks li a {
+  text-decoration: none;
+}
+
+
+.linkbutton {
+  border: 2px solid var(--secondary-color);
+  padding-top: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: var(--button-color);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+
+/* Contact Page Styling */
+label {
+  margin: 0.5rem auto;
+  display: block;
+}
+
+fieldset {
+  border: none;
+  border-bottom: 3px solid var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+legend {
+  margin: 0 auto;  
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+ input::placeholder, textarea::placeholder {
+  color: var(--text-color);
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.radiofield {
+  margin: 15px;
+}
+
+.radiofield input[type="radio"] {
+  order: -1;
+  margin-right: 8px;
+  width: auto;
+}
+
+.btn {
+  width: 125px;
+  height: 30px;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border-radius: 20px;
+}
+
+.btn:hover {
+  translate: transform(0.03s ease-in);
+  background-color: var(--accent-color);
+}
+
+.indented {
+  text-indent: 30px;
+}
+
+.socialLinksList {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/*About*/
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ryanimg {
+  max-width: 250px;
+}
+
+.info {
+  text-align: center;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1000px;
+  line-height: 2.5rem;
+}
+
+.certification-link {
+  text-align: center;
+}
+
+
+/*Home Page Styling*/
+
+.home {
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+.cards * {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.aboutme, .projects, .business, .contact, .blog {
+  border: 5px solid var(--secondary-color);
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+.contact > .pageIcons {
+  padding-top: 35px;
+}
+
+.blog > .pageIcons {
+  padding-top: 35px;
+}
+
+.business > .pageIcons {
+  padding-top: 35px;
+}
+
+.pageIcons {
+  margin-top: 10px;
+  padding: 5px;
+  fill: var(--secondary-color);
+  width: 50px;
+  height: 50px;
+}
+
+/* Projects Styling */
+
+iframe {
+  background-color: var(--text-color);
+  max-width: 100%;
+  height: 300px;
+  width: 500px;
+  margin-top: 20px;
+}
+
+.tecdoc {
+  height: 500px;
+}
+ 
+.hint {
+  font-style: italic;
+}
+
+.cardText > p {
+  font-size: 16px;
+  max-width: 80%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.skyline {
+  max-width: 100%;
+}
+
+/* Business Ventures */
+
+.businessbullets {
+  margin: -25px;
+  list-style-position: inside;
+}
+
+.businessPage {
+  max-width: 80%;
+  margin: 0 auto;
+}
+ 
+.small {
+  font-size: 11px;
+}
+
+.nogap {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+.rsclogo {
+  border: 2px solid var(--secondary-color);
+  padding: 15px;
+  width: 250px;
+
+}
+
+/* Certifications Styling */
+
+.softwaredev, .cybersec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.certimgs {
+  width: 250px;
+  margin-left: 30px;
+}
+
+.certhr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.isc2 {
+  background-color: white;
+  width: 200px;
+  margin-left: 55px;
+}
+
+.intro {
+  width: 80%;
+  margin: 50px auto;
+  font-size: 20px;
+}
+
+.infotech {
+  margin-bottom: 50px;
+}
+
+
+/*Post  Styling*/
+
+.sources {
+  margin: 0 auto;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.blogposts {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.article {
+  line-height: 1.25;
+}
+
+/*Blog Page Styling*/
+
+.articleCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.introp {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.articleone, .articletwo, .articlethree, .articlefour, .articlefive {
+  border: 5px solid var(--secondary-color);
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 1000;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*Footer Stylings*/
+footer {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  footer {
+    justify-content: center;
+    gap: 12px 24px;
+  }
+}
+
+footer p {
+  margin: 0;
+}
+
+/*Legal Docs Stylings*/
+.notmono, .notmono * {
+  font-family: Georgia;
+}
+
+.legaldocs {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  border: 2px solid var(--accent-color);
+  font-size: medium
+}
+
+td, th {
+  border-left: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+td:first-child, th:first-child {
+  border-left: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.tablegap {
+  margin-bottom: 10px;
+}
+
+/*Cookie Styling*/
+
+.cookieBanner {
+  position: fixed; bottom: 0;
+  border: 2px solid var(--accent-color);
+  background-color: white;
+  color: black;
+  display: none;
+}
+
+.cookieBanner * {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.cookieBanner > button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.cookieBanner > button:hover {
+  background-color: var(--accent-color);
+}
+
+.cookiePreferences {
+  border: 2px solid var(--accent-color);
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.cookiePreferences, .cookiePreferences *, .cookieBanner, .cookieBanner * {
+  font-family: Georgia;
+}
+
+.cookiePreferences  > button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cookiePreferences * {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.cookiePreferences {
+  display: none;
+}
+
+.cookiePreferences > button:hover {
+  background-color: var(--accent-color);
+}
+
+.prefRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*What we build Styling*/
+
+.wireframe, .peakprosample, .fullbuild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wireframe > p, .peakprosample > p {
+  width: 80%;
+}
+
+.samples {
+  margin-top: 25px;
+}
+
+.scoresfbc {
+  margin-bottom: 20px;
+}

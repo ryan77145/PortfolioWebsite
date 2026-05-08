@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Technical Document Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ryanshill.com/projects/technical-document" />
+    <meta property="og:site_name" content="Ryan Shill" />
+    <meta property="og:image" content="https://www.ryanshill.com/Assets/ogTagLogo.webp" />
+    <meta property="og:description" content="freeCodeCamp Certification Project" />
+    <meta name="description" content="freeCodeCamp Certification Project">
+    <link rel="canonical" href="https://www.ryanshill.com/projects/technical-document">
+    <link rel="stylesheet" href="/projects/technical-document/styles.css">
+    <link rel="icon" href="/Assets/RyanShillCoLogo.webp">
+    <title>Technical Documentation Page</title>
+  </head>
+
+  <body>
+    <div class="container">
+    <main id="main-doc">
+      <section class="main-section" id="What_is_Flexbox">
+        <header>What is Flexbox?</header>
+        <p> Flexbox, short for the Flexible Box Layout Module, is a CSS layout model designed to make it easier to align and distribute space among items in a container. Before Flexbox, developers relied on floats, inline-block, and positioning hacks to build layouts — techniques that were often fragile and difficult to maintain.</p>
+        <p>Flexbox works along two axes: the main axis and the cross axis. The main axis is defined by the flex-direction property and determines the direction flex items flow. The cross axis runs perpendicular to the main axis. Understanding these two axes is the foundation of everything Flexbox does.</p>
+        <p> Flexbox is best suited for one-dimensional layouts — meaning it handles either a row or a column at a time. For two-dimensional layouts involving both rows and columns simultaneously, CSS Grid is the better tool. That said, Flexbox is incredibly powerful for components like navigation bars, card rows, centered content, and form layouts.</p>
+        <div class="codeBox"> <code>display: flex;</code> </div>
+      </section>
+      <section class="main-section" id="The_Flex_Container">
+        <header>The Flex Container</header>
+        <p> The flex container is the parent element that holds all of the flex items. You create a flex container by applying display: flex; to any element. Once you do that, all direct children of that element automatically become flex items and begin following flexbox rules.</p>
+        <p>The flex-direction property controls which direction the main axis runs, determining how items are laid out inside the container. The default value is row, which arranges items horizontally left to right. You can also set it to column to stack items vertically, or use row-reverse and column-reverse to flip the order.</p>
+        <p>Another key container property is flex-wrap. By default, flex items will try to fit onto one line even if it means shrinking them. Setting flex-wrap: wrap; allows items to spill onto multiple lines when there isn't enough space, giving your layout much more flexibility across different screen sizes.</p>
+        <div class="codeBox"> <code>flex-direction: row;</code></div>
+        <ul>
+          <li>display: flex — activates flexbox on the container</li>
+          <li>flex-direction — sets the direction of the main axis</li>
+          <li>flex-wrap — controls whether items wrap to new lines</li>
+        </ul>
+      </section>
+      <section class="main-section" id="The_Flex_Items">
+        <header>The Flex Items</header>
+        <p>Flex items are the direct children of a flex container. While the container controls the overall layout direction and wrapping, flex items have their own set of properties that control how each individual item grows, shrinks, and sizes itself within the available space.</p>
+        <p>The flex-grow property defines how much an item will grow relative to the other items when there is extra space in the container. A value of 1 means the item will take up an equal share of the remaining space. If one item has flex-grow: 2 and another has flex-grow: 1, the first item will grow twice as much as the second.</p>
+        <p>The flex-shrink property works in the opposite direction — it determines how much an item will shrink when there isn't enough space. The default value is 1, meaning all items shrink equally. Setting it to 0 prevents an item from shrinking at all, which is useful when you need an element to maintain a fixed size regardless of the container width.</p>
+        <div class="codeBox"><code>flex-grow: 1;</code></div>
+        <ul>
+          <li>flex-grow — controls how much an item expands to fill space</li>
+          <li>flex-shrink — controls how much an item contracts when space is limited</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Alignment_and_Spacing">
+        
+        <header>Alignment and Spacing</header>
+        <p>One of Flexbox's most celebrated features is how easily it handles alignment. The justify-content property aligns items along the main axis. Common values include flex-start, flex-end, center, space-between, and space-around. This single property replaces a lot of the margin math developers used to do manually.</p>
+        <p>The align-items property controls alignment along the cross axis — perpendicular to the main axis. Setting align-items: center; on a flex container will vertically center all of its children when the main axis is horizontal. This made vertical centering in CSS genuinely simple for the first time, something developers had struggled with for years.</p>
+        <p>The gap property adds consistent spacing between flex items without needing to add margins to individual elements. You can set a single value like gap: 16px; to apply equal spacing in all directions, or pass two values to control row and column gaps separately. Combined with justify-content and align-items, gap gives you precise control over the entire layout.</p>
+        <div class="codeBox"><code>justify-content: space-between;</code></div>
+      </section>
+      <section class="main-section" id="Practical_Examples">
+        <header>Practical Examples</header>
+        <p>One of the most common Flexbox use cases is building a navigation bar. By setting display: flex on a <nav> element and using justify-content: space-between, you can push a logo to the left and navigation links to the right with just two lines of CSS. Adding align-items: center keeps everything vertically centered regardless of varying element heights.</p>
+        <p>Flexbox is also the go-to solution for centering content both horizontally and vertically inside a container. By setting justify-content: center and align-items: center on a parent element with a defined height, whatever is inside will be perfectly centered. This pattern is used constantly for hero sections, modals, cards, and loading screens.</p>
+        <p>Card layouts are another area where Flexbox shines. Wrapping a row of cards with display: flex and flex-wrap: wrap allows them to fill the row naturally and drop to the next line when the screen gets smaller. Combining this with flex-grow: 1 on each card ensures they expand evenly to fill available space, creating a clean responsive layout with minimal code.</p>
+        <div class="codeBox"><code>align-items: center;</code></div>
+      </section>
+  </main>
+      <nav id="navbar">
+        <header class="navheader">CSS Flexbox Documentation</header>
+        <a class="nav-link" href="#What_is_Flexbox">What is Flexbox?</a>
+        <a class="nav-link" href="#The_Flex_Container">The Flex Container</a>
+        <a class="nav-link" href="#The_Flex_Items">The Flex Items</a>
+        <a class="nav-link" href="#Alignment_and_Spacing">Alignment and Spacing</a>
+        <a class="nav-link" href="#Practical_Examples">Practical Examples</a>
+      </nav>
+    </div> 
+  </body>
+</html>

@@ -1,0 +1,62 @@
+body:not(code) {
+  font-family: serif, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: #999;
+}
+
+code {
+  font-family: monospace;
+}
+.codeBox {
+  font-family: monospace;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 175px;
+    height: 100%;
+    background-color: #777;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+a {
+  border: 2px solid black;
+  padding: 3px;
+  margin: 20px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+}
+
+main {
+    margin-left: 175px;
+    padding: 20px;
+}
