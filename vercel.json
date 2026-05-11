@@ -1,13 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/audit",
-      "destination": "https://www.ryanshill.com?utm_source=email&utm_medium=cold&utm_campaign=W1",
-      "permanent": false
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

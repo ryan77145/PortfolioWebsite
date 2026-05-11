@@ -8,61 +8,40 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ryanshill.com/contact" />
     <meta property="og:site_name" content="Ryan Shill" />
-    <meta property="og:image" content="https://www.ryanshill.com/Assets/ogTagLogo.webp" />
+    <meta property="og:image" content="https://www.ryanshill.com/Assets/230PersonalBrand.webp" />
     <meta property="og:description" content="Whether you are watching my journey or needing my help,  reach out and lets connect!" />
     <meta name="description" content="Whether you are watching my journey or needing my help,  reach out and lets connect!">
     <link rel="canonical" href="https://www.ryanshill.com/contact">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" href="/Assets/RyanShillCoLogo.webp">
+    <link rel="icon" href="/Assets/PersonalBrand48.png">
     <script defer src="/script.js"></script>
     <title>Contact</title>
   </head>
   <body class="contact-me">
     <header>
-      <h1>Let's Connect!</h1>
-      <h2 class="centered">Fill out the form below or reach out on social media!</h2>
-      <hr>
-      <nav id="navigation">
+      <div class="header">
+        <a class="titlea" href="/index.html" aria-label="home link">
+          <h2 class="title">Let's Connect</h2>
+        </a>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <nav class="navbar">
         <ul class="navlinks">
-          <li>
-            <a href="/index.html">Home</a>
-          </li>
-          <li>
-            <a href="/aboutme.html">About</a>
-          </li>
-          <li>
-            <a href="/projects/index.html">Projects</a>
-          </li>
-          <li>
-            <a href="/contact.html">Contact Me</a>
-          </li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/aboutme.html">About</a></li>
+          <li><a href="/projects/index.html">Portfolio</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
-        <hr>
       </nav>
-    </header>
-    <div class="cookieBanner">
-      <p class="small">We use essential cookies to make our site work. With your consent, we may also use non-essential cookies to improve user experience and analyze website traffic. By clicking “Accept,” you agree to our website's cookie use as described in our Cookie Policy. You can change your cookie settings at any time by clicking “Preferences.”</p>
-      <button id="accept">Accept</button>
-      <button id="decline">Decline</button>
-      <button id="preferences">Preferences</button>
     </div>
-    <div class="cookiePreferences">
-      <h2>Cookie Preferences</h2>
-      <p>We use cookies to improve your experience. You can choose which cookies to allow below. For more information see our <a href="/legalDocumentation/cookiePolicy.html" class="policy">Cookie Policy</a> and <a href="/legalDocumentation/privacy.html" class="policy">Privacy Policy</a>.</p>
-      <div class="prefRow">
-        <h3>Essential</h3><input class="disabled" type="checkbox" checked disabled>
-      </div>
-      <p>These cookies are required for the site to function and cannot be disabled.</p>
-      <div class="prefRow">
-      <h3 class="analytics">Analytics</h3><input class="analytics" type="checkbox" checked>
-      </div>
-      <p>These cookies help us understand how visitors use our site. We use this data to improve performance and user experience.</p>
-      <button id="save">Save</button>
-      <button id="close">Close</button>
-      </div>
+  </header>
     <main>
+      <h3 class="centered contacth3">Fill out the form below or reach out on social media!</h3>
     <div class="container-contact">
-    <form class="contactpage">
+    <form class="contactpage" id="contact" action="http://localhost:3000/contact" method="POST">
       <fieldset class="personal">
        <legend class="information">Personal Information: </legend>
         <label for="name">Full Name: 
@@ -71,53 +50,63 @@
             name="name"
             id="name"
             required
-            placeholder=" E.g. Jane Doe"/></label>
+            placeholder="E.g. Jane Doe"/></label>
         <label for="emailinput">Email: 
          <input
             type="email"
             name="emailfield"
             id="emailinput"
             required
-            placeholder=" janedoe@email.com"/></label>
+            placeholder="janedoe@email.com"/></label>
         <label for="number">Phone Number: 
          <input
             type="tel"
             name="number"
             id="number"
             required
-            placeholder=" (123)456-7890"
+            placeholder="(123)456-7890"
             /></label> 
       </fieldset>
-      <fieldset class="radiofield">
-        <legend class="radio-legend">Preferred Method: </legend>
-          <label for="phone">Phone 
+      <fieldset class="checkboxfield">
+        <legend class="checkbox-legend">Preferred Method: </legend>
+          <label for="phone">Call 
             <input
-              type="radio"
-              name="radio"
-              id="phone"
-              value="phone"/></label>
+              type="checkbox"
+              name="checkbox"
+              id="call"
+              value="call"/></label>
+          <label for="phone">Text 
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="text"
+              value="text"/></label>
           <label for="email">Email 
             <input
-              type="radio"
-              name="radio"
+              type="checkbox"
+              name="checkbox"
               id="email"
               value="email"/></label>
       </fieldset>    
       <fieldset>
         <legend>Additional Information: </legend>
         <textarea class="comments"
+          name="comments"
           rows="6"
           cols="50"
-          placeholder="  I am reaching out because..."></textarea>
+          placeholder="I am reaching out because..."></textarea>
       </fieldset>
-      <button class="btn"
-      type="submit">Submit!</button>
+      <button class="btn" type="submit">Submit</button>
     </form>
   </div>
+  <div class="formsubmittedbanner">
+    <h3>Form Submitted Successfully!</h3>
+    <h4>Thank you for reaching out!</h4>
+    <h4>We will respond within 48 hours.</h4>
+    <button class="closebtn">Close</button> 
+  </div>
   <div class="social-media">
-    <h2>Reach out on social media:</h2>
-    <hr>
-    <p>
+    <p>Reach out on social media:</p>
       <a href="https://www.facebook.com/ryanshillco" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="socialLinks">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="socialIcons"><path d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/></svg>
       </a>
@@ -127,7 +116,6 @@
       <a href="https://www.linkedin.com/in/ryan-shill"  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="socialLinks">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="socialIcons"><path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"/></svg>
       </a>
-    </p>
   </div>
 </main>
   <footer>

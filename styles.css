@@ -7,6 +7,9 @@
   --secondary-text-color: #000000;
 }
 
+input, button, textarea, select {
+    font: inherit;
+}
 
 * {
   margin: 0;
@@ -86,15 +89,21 @@ body {
   text-align: center;
 }
 
+.social-media p {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
 .socialIcons {
-  margin: 30px;
-  padding: 20px;
+  margin: 0 5px;
+  padding: 8px;
   text-align: center;
   border: 2px solid var(--secondary-color);
   border-radius: 20px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   fill: var(--secondary-color);
+  line-height: normal;
 }
 
 .centered {
@@ -114,7 +123,7 @@ a:not(.socialLinks):visited:not(.titlea):visited {
   color: var(--text-color);
 }
 
-a:not(.socialLinks) {
+a:not(.socialLinks):not(.linkbutton) {
   color: var(--text-color);
 }
 
@@ -139,7 +148,6 @@ a:not(.socialLinks) {
   text-decoration: none;
 }
 
-
 .linkbutton {
   border: 2px solid var(--secondary-color);
   padding-top: 2px;
@@ -148,10 +156,60 @@ a:not(.socialLinks) {
   background-color: var(--button-color);
   border-radius: 10px;
   text-decoration: none;
+  color: var(--secondary-text-color);
 }
 
 
 /* Contact Page Styling */
+.formsubmittedbanner {
+  background-color: var(--accent-color);
+  border: 10px solid var(--secondary-text-color);
+  border-radius: 10px;;
+  text-align: center;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 8px 16px var(--text-color);
+  display: none;
+  color: var(--secondary-text-color);
+
+}
+
+.checkboxfield {
+  margin: 15px;
+}
+
+.checkboxfield input[type="checkbox"] {
+  order: -1;
+  margin-right: 8px;
+  width: auto;
+}
+
+.formsubmittedbanner.active {
+  display: block;
+}
+
+.formsubmittedbanner h4, .formsubmittedbanner h3  {
+  padding-bottom:  5px;
+}
+
+.formsubmittedbanner h3 {
+  padding-top: 5px;
+}
+
+.closebtn {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 75px;
+  border-radius: 10px;
+}
+
+.contacth3 {
+  margin: 20px auto;
+}
+
 label {
   margin: 0.5rem auto;
   display: block;
@@ -181,10 +239,11 @@ input, textarea {
   box-sizing: border-box;
   border: 2px solid var(--text-color);
   background-color: var(--secondary-color);
+  border-radius: 10px;
 }
 
  input::placeholder, textarea::placeholder {
-  color: var(--text-color);
+  color: var(--secondary-text-color);
 }
 
 form {
@@ -194,25 +253,25 @@ form {
   margin: 0 auto;
 }
 
-.radiofield {
-  margin: 15px;
+input:active, textarea:active {
+  background-color: var(--accent-color);
 }
 
-.radiofield input[type="radio"] {
-  order: -1;
-  margin-right: 8px;
-  width: auto;
+input:focus::placeholder, textarea:focus::placeholder {
+  color: transparent;
 }
 
 .btn {
   width: 125px;
   height: 30px;
-  padding: 0;
+  text-align: center;
+  margin: 30px auto;
   display: block;
-  margin: 0 auto;
   background-color: var(--button-color);
-  color: var(--text-color);
+  color: var(--secondary-text-color);
   border-radius: 20px;
+  line-height: 30px;
+  font-weight: 600;
 }
 
 .btn:hover {
@@ -241,12 +300,12 @@ form {
 }
 
 .paragraphs {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 auto;
-  max-width: 1000px;
-  line-height: 2.5rem;
+ margin: 20px;
+}
+
+.paragraphs p {
+  line-height: 2.5;
+  margin-bottom: 10px;
 }
 
 .certification-link {
@@ -319,13 +378,27 @@ iframe {
   max-width: 100%;
   height: 300px;
   width: 500px;
-  margin-top: 20px;
+  margin-top: 50px;
+  grid-area: image;
+}
+
+.cardtext {
+  grid-area: text;
 }
 
 .projectcards {
+ max-width: 1000px;
+ margin: 40px auto;
+ padding: 0 30px;
+}
+
+.appFeedbackForm, .playingCards, .bookInventory, .technicalDocument, .skyline {
   display: grid;
-  grid-template-columns: auto auto;
-  margin: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text image";
+  align-items: center;
+  gap: 50px;
+  max-width: 100%;
 }
 
 .tecdoc {
@@ -341,22 +414,25 @@ iframe {
 
 .softwaredev, .cybersec {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;
+  justify-content: center;
   max-width: 800px;
-  margin: 0 auto;
-  gap: 10px;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.softwaredev, .cyber {
+  border:3px solid var(--accent-color);
+  padding: 50px 20px;
 }
 
 .certimgs {
   width: 250px;
   margin-left: 30px;
+  margin-right: 20px;
 }
 
-.certhr {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
 
 .isc2 {
   background-color: white;
@@ -371,7 +447,11 @@ iframe {
 }
 
 .infotech {
-  margin-bottom: 50px;
+  margin: 50px auto;
+  max-width: 60%;
+  text-align: center;
+  border: 3px solid var(--accent-color);
+  padding: 20px 10px;
 }
 
 .italics {
@@ -389,11 +469,6 @@ footer {
   align-items: flex-end;
   justify-content: space-evenly;
   gap: 12px;
-}
-
-
-footer p {
-  margin: 0;
 }
 
 .header {
@@ -461,7 +536,19 @@ footer p {
 
   .title.active {       
     display: none;     
-  }       
+  }
+
+  .title {
+    margin-left: 5px;
+  }
+  
+  .appFeedbackForm, .playingCards, .bookInventory, .technicalDocument, .skyline {
+  display: block;
+}
+
+  .abouttitle {
+    font-size: 2.5rem;
+  }
 }   
 
 @media (min-width: 800px) and (max-width: 836px) {     
@@ -472,7 +559,7 @@ footer p {
     width: 100%;     } 
   } 
   
-  @media (max-width: 390px) {   
+  @media (max-width: 470px) {   
     .title {     
       font-size: 2rem;   
     } 

@@ -7,11 +7,6 @@
   </url>
 
   <url>
-    <loc>https://www.ryanshill.com/whatwebuild.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://www.ryanshill.com/contact.html</loc>
     <priority>0.8</priority>
   </url>
@@ -22,11 +17,6 @@
   </url>
 
   <url>
-    <loc>https://www.ryanshill.com/ryanshillco.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://www.ryanshill.com/aboutme.html</loc>
     <priority>0.7</priority>
   </url>
@@ -34,51 +24,6 @@
   <url>
     <loc>https://www.ryanshill.com/projects/</loc>
     <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/blog/</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/blog/posts/hidden-cost-of-bad-web-design.html</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/blog/posts/page-speed-kills-conversions.html</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/blog/posts/signs-website-turning-away-leads.html</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/legalDocumentation/accessibility.html</loc>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/legalDocumentation/disclaimer.html</loc>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/legalDocumentation/cookiePolicy.html</loc>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/legalDocumentation/privacy.html</loc>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://www.ryanshill.com/legalDocumentation/terms.html</loc>
-    <priority>0.3</priority>
   </url>
 
 </urlset>
