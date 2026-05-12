@@ -9,6 +9,9 @@ const transporter = nodemailer.createTransport({
 });
 
 module.exports = async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://www.ryanshill.com");
+    res.setHeader("Access-Control-Allow-Methods", "POST");
+
   if (req.method !== "POST") {
     return res.status(405).send("Method not allowed");
   }
