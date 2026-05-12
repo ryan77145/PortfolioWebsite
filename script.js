@@ -19,7 +19,7 @@ contactForm.addEventListener('submit', async (e) => {
   
   const formData = new FormData(contactForm);
   
-  const response = await fetch('https://ryanshill.com/api/contact', {
+  const response = await fetch('https://www.ryanshill.com/api/contact', {
     method: 'POST',
     body: new URLSearchParams(formData)
   });
