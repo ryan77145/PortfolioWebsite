@@ -1,9 +1,9 @@
 :root {
   --main-color: #40434E;
-  --secondary-color: cyan;
+  --secondary-color: #00ffff;
   --accent-color: #8DDCA4;
-  --button-color: cyan;
-  --text-color: white;
+  --button-color: #00ffff;
+  --text-color: #ffffff;
   --secondary-text-color: #000000;
 }
 
