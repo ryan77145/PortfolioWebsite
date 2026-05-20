@@ -91,4 +91,102 @@ if (contactForm) {
     });
 }
 
+//Projects Page JS
+//animation for card movement
+const thumbnails = document.querySelectorAll(".thumbnail");
 
+function startHandler( event ) {
+  const graphicActive = event.target.querySelector(".projectgraphic");
+  const leftActive = event.target.querySelector(".left");
+
+   if (event.pointerType === 'touch' || event.pointerType === 'pen' || event.pointerType === 'mouse') {
+    event.preventDefault();
+
+    graphicActive.classList.add('graphic-active');
+    leftActive.classList.add('left-active');
+
+    setTimeout(function() {
+       graphicActive.classList.remove('graphic-active');
+       leftActive.classList.remove('left-active');
+    }, 10000);  
+  }
+}
+
+for (let i=0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener("pointerenter", startHandler, false);
+}
+
+function endHandler( event ) {
+  const graphicActive = event.target.querySelector(".projectgraphic");
+  const leftActive = event.target.querySelector(".left");
+
+   if (event.pointerType === 'touch' || event.pointerType === 'pen' || event.pointerType === 'mouse') {
+    event.preventDefault();
+
+    graphicActive.classList.remove('graphic-active');
+    leftActive.classList.remove('left-active');
+
+}
+}
+for (let i=0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener("pointerleave", endHandler, false);
+}
+//annimation for page load - random matrix
+/*window.addEventListener('load', () => {
+    for (let i=0; i < thumbnails.length; i++) {
+    thumbnails[i].classList.add('load-animation')
+thumbnails[i].style.animationDelay = Math.random() * 2 + "s"
+}
+})*/
+
+//animation for page load - card dealing
+
+window.addEventListener('load', () => {
+    setTimeout(function() {
+       const middleCard = thumbnails[4].getBoundingClientRect();
+       const centerX = middleCard.left + middleCard.width / 2;
+       const centerY = middleCard.top + middleCard.height / 2;
+
+        for (let i = 0; i < thumbnails.length; i++) {
+            const cardLocation = thumbnails[i].getBoundingClientRect();
+            const cardsX = cardLocation.left + cardLocation.width / 2;
+            const cardsY = cardLocation.top + cardLocation.height / 2;
+            const travelX = cardsX - centerX;
+            const travelY = cardsY - centerY;
+
+            thumbnails[i].style.transform = `translate(${-travelX}px, ${-travelY}px)`;
+
+            setTimeout(function() {
+                thumbnails[i].style.transition = 'transform 1s ease';
+            }, 500 + (i * 200));
+
+            setTimeout(function() {
+                thumbnails[i].style.transform = 'none';
+            }, 501 + (i * 200));
+        }
+    }, 100);
+});
+
+//animation for page load - diagnol slide
+
+/* window.addEventListener('load', () => {
+       const middleCard = thumbnails[4].getBoundingClientRect();
+       const centerX = middleCard.left + middleCard.width / 2 + window.scrollX;
+       const centerY = middleCard.top + middleCard.height / 2 + window.scrollY;
+
+        for (let i = 0; i < thumbnails.length; i++) {
+            const cardLocation = thumbnails[i].getBoundingClientRect();
+            const travelX = cardLocation.left - centerX;
+            const travelY = cardLocation.top - centerY;
+
+            thumbnails[i].style.transform = `translate(${-travelX}px, ${-travelY}px)`;
+
+            setTimeout(function() {
+                thumbnails[i].style.transition = 'transform 1s ease';
+            }, 500);
+
+            setTimeout(function() {
+                thumbnails[i].style.transform = 'none';
+            }, 501);
+        }
+}); */

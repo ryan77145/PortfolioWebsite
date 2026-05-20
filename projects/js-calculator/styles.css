@@ -1,0 +1,125 @@
+* {
+    font-family: 'Orbitron';
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.outerbox {
+    background-color: black;
+    width: 400px;
+    height: 650px;
+    margin: 50px auto;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    box-shadow: 5px 5px;
+}
+
+.innerbox {
+    background-color: slategray;
+    width: 350px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    top: 3%;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.screen {
+    background-color: white;
+    width: 325px;
+    height: 100px;
+    position: relative;
+    top: 1%;
+    left: 3%;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px;
+    text-align: right;
+    overflow: hidden;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.button, .buttonequal {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: silver;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 5px 5px;
+    cursor: pointer;
+}
+
+.buttonclear {
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background-color: silver;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 5px 5px;
+    cursor: pointer;
+}
+
+.button:hover, .buttonequal:hover, .buttonclear:hover {
+    background-color: white;
+}
+
+.buttonequal {
+    background-color: burlywood;
+}
+
+.line {
+    position: relative;
+    top: -10%;
+    font-size: 85px;
+    overflow: hidden;
+    animation: flash 1s linear infinite;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.projectinformation {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.projectdescription {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.projectlink {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: burlywood;
+}
+
+.projectlink:link, .projectlink:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.projectlink:hover {
+    background-color: white;
+}
