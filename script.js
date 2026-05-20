@@ -142,7 +142,6 @@ thumbnails[i].style.animationDelay = Math.random() * 2 + "s"
 //animation for page load - card dealing
 
 window.addEventListener('load', () => {
-    setTimeout(function() {
        const middleCard = thumbnails[4].getBoundingClientRect();
        const centerX = middleCard.left + middleCard.width / 2;
        const centerY = middleCard.top + middleCard.height / 2;
@@ -165,7 +164,6 @@ window.addEventListener('load', () => {
                 thumbnails[i].style.opacity = '1';
             }, 501 + (i * 200));
         }
-    }, 100);
 });
 
 //animation for page load - diagnol slide
