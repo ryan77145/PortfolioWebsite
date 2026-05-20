@@ -430,6 +430,7 @@ I think i want a modal for this as well on desktop - maybe
   align-self: center;
   justify-self: center;
   position: relative;
+  opacity: 0;
 }
 
 .projecttext {
