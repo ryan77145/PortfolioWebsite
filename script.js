@@ -157,11 +157,12 @@ window.addEventListener('load', () => {
             thumbnails[i].style.transform = `translate(${-travelX}px, ${-travelY}px)`;
 
             setTimeout(function() {
-                thumbnails[i].style.transition = 'transform 1s ease';
+                thumbnails[i].style.transition = 'transform 1s ease, opacity 1s ease';
             }, 500 + (i * 200));
 
             setTimeout(function() {
                 thumbnails[i].style.transform = 'none';
+                thumbnails[i].style.opacity = '1';
             }, 501 + (i * 200));
         }
     }, 100);

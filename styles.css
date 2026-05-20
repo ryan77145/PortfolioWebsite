@@ -504,11 +504,11 @@ animation: onload 1s ease forwards;
   transform: rotate(-90deg);
   text-align: left;
   white-space: nowrap;
-}*/
+}
 
 .animationtoggle:hover {
   background-color: var(--button-color);
-}
+}*/
 
 
 /*Keyframes For Projects Page*/
