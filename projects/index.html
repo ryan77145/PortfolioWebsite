@@ -62,7 +62,7 @@
       </div>-->
       <div class="projectthumbnail">
         <div class="thumbnails">
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="jscalcmodal">
             <div class="projecttext">
               <h3 class="projecttitle">Javascript Calculator</h3>
               <p class="projectpara">
@@ -85,7 +85,7 @@
               Your browser does not support the video tag.
             </video>
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="appfeedbackmodal">
             <div class="projecttext">
               <h3 class="projecttitle">Application Feedback Form</h3>
               <p class="projectpara">
@@ -94,42 +94,42 @@
               <a class="projectbutton" href="/projects/survey-form/index.html">Live View</a>
             </div>
             <img
-              class="projectgraphic"
+              class="projectgraphic mobileleft"
               src="/Assets/AppFeedbackForm.webp"
               alt="App Feedback Form Project Screenshot"
               width="400"
               height="400"
             />
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="bookinventorymodal">
             <div class="projecttext">
               <h3 class="projecttitle">Book Inventory</h3>
               <p class="projectpara">Responsive Web Desgin Certification Project - This project was an introduction to linear gradients and multi-classes within HTML. It allows for a creative project while playing with different colors and selectors.</p>
               <a class="projectbutton" href="/projects/book-inventory/index.html">Live View</a>
             </div>
             <img
-              class="projectgraphic left"
+              class="projectgraphic left mobileright"
               src="/Assets/BookInventory.webp"
               alt="Book Inventory Project Screenshot"
               width="400"
               height="400"
             />
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="landingpagemodal">
             <div class="projecttext">
               <h3 class="projecttitle">Landing Page Example</h3>
               <p class="projectpara">Ryan Shill Co business sample of a landing page. Based on a ficticious roofing company operating out of Kansas City, MO. Completed using HTML and CSS, hosted and deployed on Vercel.</p>
               <a class="projectbutton" href="https://peakprosample.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="sample website link">Live View</a>
             </div>
             <img
-              class="projectgraphic"
+              class="projectgraphic mobileleft"
               src="/Assets/LandingPageSample.webp"
               alt="Landing Page Sample Project Screenshot"
               width="400"
               height="400"
             />
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="multipagemodal">
             <div class="projecttext">
               <h3 class="projecttitle">Multi-Page Example</h3>
               <p class="projectpara">Ryan Shill Co business sample of a multi-page site. Based on a ficticious construction company operating out of Kansas City, MO. Completed using HTML and CSS, hosted and deployed on Vercel.</p>
@@ -147,21 +147,21 @@
               Your browser does not support the video tag.
             </video>
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="personalsitemodal">
             <div class="projecttext">
               <h3 class="projecttitle">Personal Portfolio Site</h3>
               <p class="projectpara">This website,  ryanshill.com, was developed to showcase my development journey, document my experience throughout, and connect with likeminded developers. The site is handcoded with HTML, CSS, and JavaScript. I ensure my sites recieve a 95+ performance score and pass all of my post launch testing.</p>
               <a class="projectbutton" href="/index.html">Live View</a>
             </div>
             <img
-              class="projectgraphic left"
+              class="projectgraphic left mobileleft"
               src="/Assets/PersonalBrandThumbnail.webp"
               alt="Personal Brand Project Screenshot"
               width="400"
               height="400"
             />
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="playingcardsmodal">
             <div class="projecttext">
               <h3 class="projecttitle">Playing Cards</h3>
               <p class="projectpara">Responsive Web Design Certification Project - This project was the first of the CSS project and introduced me to CSS Flexbox. While simple, this project was vital to my learning of CSS Flexbox.</p>
@@ -175,28 +175,28 @@
               height="400"
             />
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="businesssitemodal">
             <div class="projecttext">
               <h3 class="projecttitle">Buisness Website</h3>
               <p class="projectpara">Ryan Shill Co is a web development and design company, I built this website for my business in the same way I built my portfolio website, hand-coded, performance optimized. This website features a inline cookie consent system, custom google analytics tracking, and a submittable contact form which emails me through nodemailer whenever the contact form is completed. These are all completed through JavaScript.</p>
               <a class="projectbutton" href="https://www.ryanshill.co">Live View</a>
             </div>
             <img
-              class="projectgraphic"
+              class="projectgraphic mobileleft"
               src="/Assets/RSCThumbnail.webp"
               alt="Ryan Shill Co Business Logo"
               width="400"
               height="400"
             />
           </div>
-          <div class="thumbnail">
+          <div class="thumbnail" data-modal="skylinemodal">
             <div class="projecttext">
               <h3 class="projecttitle">Skyline</h3>
               <p class="projectpara">Responsive Web Design Certification - This was the final of the RWD projects and by far my favorite. The skyline project brought a lot more CSS into the mix, CSS positioning, media queries, and more. I found that I learned a lot on this project alone that has continued to benefit me throughout my journey.</p>
               <a class="projectbutton" href="/projects/skyline/index.html">Live View</a>
             </div>
             <img
-              class="projectgraphic left"
+              class="projectgraphic left mobileright"
               src="/Assets/Skyline.webp"
               alt="Skyline Project Screenshot"
               width="400"
@@ -205,10 +205,64 @@
           </div>
         </div>
       </div>
+      <div class="modal jscalcmodal">
+        <p class="closebutton">X</p>
+        <h3>Javascript Calculator</h3>
+        <p>Functional JavaScript Calculator with full UI. Click below to see live view and interact.</p>
+        <a class="modalbutton" href="/projects/js-calculator/index.html">Live View</a>
+      </div>
+      <div class="modal appfeedbackmodal">
+        <p class="closebutton">X</p>
+          <h3>Application Feedback Form</h3>
+          <p>Responsive Web Desgin Certification Project - This project was the first of the RWD Certification program, it relyed purely on HTML and guided my learning for form creation.</p>
+          <a class="modalbutton" href="/projects/survey-form/index.html">Live View</a>
+      </div>
+      <div class="modal bookinventorymodal">
+        <p class="closebutton">X</p>
+          <h3>Book Inventory</h3>
+          <p>Responsive Web Desgin Certification Project - This project was an introduction to linear gradients and multi-classes within HTML. It allows for a creative project while playing with different colors and selectors.</p>
+          <a class="modalbutton" href="/projects/book-inventory/index.html">Live View</a>
+      </div>
+      <div class="modal landingpagemodal">
+        <p class="closebutton">X</p>
+          <h3>Landing Page Example</h3>
+            <p>Ryan Shill Co business sample of a landing page. Based on a ficticious roofing company operating out of Kansas City, MO. Completed using HTML and CSS, hosted and deployed on Vercel.</p>
+            <a class="modalbutton" href="https://peakprosample.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="sample website link">Live View</a>
+        </div>
+        <div class="modal multipagemodal">
+          <p class="closebutton">X</p>
+            <h3>Multi-Page Example</h3>
+            <p>Ryan Shill Co business sample of a multi-page site. Based on a ficticious construction company operating out of Kansas City, MO. Completed using HTML and CSS, hosted and deployed on Vercel.</p>
+            <a class="modalbutton" href="https://fullbuildconstruction.vercel.app/">Live View</a>
+          </div>
+        <div class="modal personalsitemodal">
+          <p class="closebutton">X</p>
+            <h3>Personal Portfolio Site</h3>
+            <p>This website,  ryanshill.com, was developed to showcase my development journey, document my experience throughout, and connect with likeminded developers. The site is handcoded with HTML, CSS, and JavaScript. I ensure my sites recieve a 95+ performance score and pass all of my post launch testing.</p>
+            <a class="modalbutton" href="/index.html">Live View</a>
+          </div>
+        <div class="modal playingcardsmodal">
+          <p class="closebutton">X</p>
+            <h3>Playing Cards</h3>
+            <p>Responsive Web Design Certification Project - This project was the first of the CSS project and introduced me to CSS Flexbox. While simple, this project was vital to my learning of CSS Flexbox.</p>
+            <a class="modalbutton" href="/projects/playing-cards/index.html">Live View</a>
+          </div>
+        <div class="modal businesssitemodal">
+          <p class="closebutton">X</p>
+            <h3 class="projecttitle">Buisness Website</h3>
+            <p class="projectpara">Ryan Shill Co is a web development and design company, I built this website for my business in the same way I built my portfolio website, hand-coded, performance optimized. This website features a inline cookie consent system, custom google analytics tracking, and a submittable contact form which emails me through nodemailer whenever the contact form is completed. These are all completed through JavaScript.</p>
+            <a class="modalbutton" href="https://www.ryanshill.co">Live View</a>
+          </div>
+        <div class="modal skylinemodal">
+          <p class="closebutton">X</p>
+            <h3>Skyline</h3>
+            <p>Responsive Web Design Certification - This was the final of the RWD projects and by far my favorite. The skyline project brought a lot more CSS into the mix, CSS positioning, media queries, and more. I found that I learned a lot on this project alone that has continued to benefit me throughout my journey.</p>
+            <a class="modualbutton" href="/projects/skyline/index.html">Live View</a>
+          </div>
       <div class="social-media">
         <p>Reach out on social media:</p>
         <a
-          href="https://www.facebook.com/ryanshillco"
+          href="https://www.facebook.com/ryanshill"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -261,7 +315,7 @@
       </div>
     </main>
     <footer>
-      <p class="small">&copy; 2026 Ryan Shill. All Rights Reserved.</p>
+      <p>&copy; 2026 Ryan Shill. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
