@@ -168,7 +168,7 @@ for (let i = 0; i < thumbnails.length; i++) {
 
 //animation for page load - card dealing
 window.addEventListener("load", () => {
-  if (document.documentElement.clientWidth >= 550) {
+  if (document.documentElement.clientWidth >= 580) {
     const middleCard = thumbnails[4].getBoundingClientRect();
     const centerX = middleCard.left + middleCard.width / 2;
     const centerY = middleCard.top + middleCard.height / 2;
@@ -205,22 +205,27 @@ const modal = document.querySelectorAll(".thumbnail");
 
 if (modal.length) {
   let targetModal;
-
+  
   for (let i = 0; i < modal.length; i++) {
     modal[i].addEventListener("click", (event) => {
+      if (document.documentElement.clientWidth <= 579) {
+        if (targetModal) {
+      targetModal.classList.remove("active");
+    }
       targetModal = document.querySelector(
         "." + event.currentTarget.dataset.modal,
       );
-      targetModal.classList.toggle("active");
-    });
+      targetModal.classList.add("active");
+  }});
   }
   const close = document.querySelectorAll(".closebutton");
   for (let i = 0; i < close.length; i++) {
     close[i].addEventListener("click", () => {
-      targetModal.classList.toggle("active");
+      targetModal.classList.remove("active");
     });
   }
 }
+
 
 //animation for page load - diagnol slide
 

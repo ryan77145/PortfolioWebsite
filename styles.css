@@ -117,25 +117,18 @@ body {
 
 /* Links */
 
-a:not(.socialLinks):hover:not(.titlea):hover:not(.toggle-button):hover:not(
-    .proejctbutton
-  ):hover:not(.modalbutton):hover,
-a:not(.socialLinks):focus:not(.titlea):focus:not(.toggle-button):focus:not(
-    .projectbutton
-  ):focus:not(.modalbutton):focus {
+a:not(.socialLinks):not(.titlea):not(.toggle-button):not(.projectbutton):not(.modalbutton):not(.githubview):hover, a:not(.socialLinks):not(.titlea):not(.toggle-button):not(.projectbutton):not(.modalbutton):not(.githubview):focus {
   transition: var(--accent-color) 0.1s ease-in;
   border: 2px solid var(--accent-color);
   border-radius: 10px;
   padding: 3px;
 }
 
-a:not(.socialLinks):visited:not(.titlea):visited:not(
-    .projectbutton
-  ):visited:not(.modalbutton):visited {
+a:not(.socialLinks):not(.titlea):not(.projectbutton):not(.modalbutton):not(.githubview):visited {
   color: var(--text-color);
 }
 
-a:not(.socialLinks):not(.linkbutton):not(.projectbutton):not(.modalbutton) {
+a:not(.socialLinks):not(.linkbutton):not(.projectbutton):not(.modalbutton):not(.githubview) {
   color: var(--text-color);
 }
 
@@ -459,17 +452,13 @@ iframe {
   margin: 3px;
 }
 
-.thumbnail:nth-last-child(2 of .thumbnail) {
-  font-size: 14px;
-}
-
 .projectgraphic {
   position: absolute;
   top: 0%;
   left: 0%;
 }
 
-.projectbutton {
+.projectbutton, .githubview {
   border: 2px solid var(--secondary-text-color);
   padding-top: 2px;
   padding-left: 7px;
@@ -480,9 +469,18 @@ iframe {
   color: var(--secondary-text-color);
 }
 
+.githubview {
+  text-align: center;
+}
+
 .projectbutton:hover {
   background-color: var(--button-color);
   color: var(--secondary-text-color);
+}
+.githubview:hover {
+  background-color: var(--button-color);
+  color: var(--secondary-text-color);
+
 }
 
 .projectintro {
@@ -625,7 +623,7 @@ iframe {
   border: 10px solid var(--secondary-text-color);
   border-radius: 10px;
   text-align: center;
-  width: 400px;
+  width: 350px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -634,20 +632,21 @@ iframe {
   display: none;
   color: var(--secondary-text-color);
   cursor: pointer;
+  z-index: 1;
 }
 
 .modal.active {
   display: block;
 }
 
-.modalbutton {
+a.modalbutton {
   border: 3px solid var(--secondary-text-color);
   padding: 5px;
   color: var(--secondary-text-color);
   text-decoration: none;
 }
 
-.modalbutton:hover {
+a.modalbutton:hover {
   background-color: var(--button-color);
   color: var(--secondary-text-color);
 }
@@ -753,23 +752,10 @@ footer {
 
 /*Media Queries*/
 
-@media (min-width: 900px) and (max-width: 1000px) {
+@media (min-width: 800px) and (max-width: 1000px) {
   .thumbnails {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .thumbnail:last-child {
-    grid-column: span 2;
-  }
-}
-
-@media (min-width: 801px) and (max-width: 900px) {
-  .thumbnails {
-    margin-left: 2px;
-    justify-content: center;
-  }
-  .thumbnail:last-child {
-    grid-column: span 2;
   }
 }
 
@@ -822,13 +808,7 @@ footer {
   }
 }
 
-@media (min-width: 660px) and (max-width: 800px) {
-  .graphic-active,
-  .left-active,
-  .mobile-left,
-  .mobile-right {
-    animation: none;
-  }
+@media (min-width: 661px) and (max-width: 880px) {
 
   .thumbnails {
     display: grid;
@@ -846,14 +826,10 @@ footer {
     height: 300px;
   }
 
-  .projecttext,
-  .projectbutton {
-    display: none;
+  .projecttext {
+    font-size: 12px;
   }
 
-  .thumbnail:last-child {
-    grid-column: span 2;
-  }
 }
 
 @media (min-width: 800px) and (max-width: 836px) {
@@ -865,7 +841,12 @@ footer {
   }
 }
 
-@media (min-width: 550px) and (max-width: 660px) {
+@media (min-width: 580px) and (max-width: 660px) {
+  .thumbnails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
   .thumbnail {
     justify-content: center;
     gap: 2px;
@@ -878,23 +859,26 @@ footer {
     height: 250px;
   }
 
-  .thumbnail:last-child {
-    grid-column: span 2;
-  }
-
   .projecttext,
   .projectbutton {
     display: none;
   }
 }
 
-@media (min-width: 490px) and (max-width: 549px) {
-  .thumbnails {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 579px) {
+  .graphic-active, .mobile-left, .mobile-right, .left-active {
+    animation: none;
   }
 
-  .thumbnail:last-child {
-    grid-column: span 2;
+  .thumbnail {
+    z-index: 0;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 579px) {
+
+  .thumbnails {
+    grid-template-columns: 1fr 1fr;
   }
 
   .thumbnail {
