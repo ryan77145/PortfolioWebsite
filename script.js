@@ -208,7 +208,7 @@ if (modal.length) {
   
   for (let i = 0; i < modal.length; i++) {
     modal[i].addEventListener("click", (event) => {
-      if (document.documentElement.clientWidth <= 579) {
+      if (document.documentElement.clientWidth <= 600) {
         if (targetModal) {
       targetModal.classList.remove("active");
     }
