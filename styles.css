@@ -865,7 +865,7 @@ footer {
   }
 }
 
-@media (max-width: 579px) {
+@media (max-width: 600px) {
   .graphic-active, .mobile-left, .mobile-right, .left-active {
     animation: none;
   }
