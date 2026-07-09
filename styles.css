@@ -294,22 +294,35 @@ textarea:focus::placeholder {
 
 /*About*/
 
+.container {
+  displaY: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+   "heading photo"
+   "info description"
+   "certs other";
+}
+
 .image {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  justify-content: center; 
 }
 
 .ryanimg {
   max-width: 250px;
+  grid-area: photo;
 }
 
 .info {
   text-align: center;
+  grid-area: heading;
+  border-right: 2px solid var(--accent-color);
 }
 
 .paragraphs {
   margin: 20px;
+  grid-area: info;
+  border-right: 2px solid var(--accent-color);
 }
 
 .paragraphs p {
@@ -319,6 +332,8 @@ textarea:focus::placeholder {
 
 .certification-link {
   text-align: center;
+  grid-area: certs;
+  border-right: 2px solid var(--accent-color);
 }
 
 /*Home Page Styling*/

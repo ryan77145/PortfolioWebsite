@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
   await transporter.sendMail({
     to: process.env.EMAIL_USER,
     from: process.env.EMAIL_USER,
-    subject: "Contact Form Submission",
+    subject: "Contact Form Submission From Personal",
     text: `
     Name: ${name}
     Email: ${emailfield}
@@ -34,5 +34,5 @@ module.exports = async (req, res) => {
     Comments: ${comments}`
   });
 
-  res.send("Form Submitted Successfully! We will reach out soon");
+  res.send("Form Submitted Successfully! I will reach out soon");
 };
