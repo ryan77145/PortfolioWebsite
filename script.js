@@ -202,21 +202,23 @@ window.addEventListener("load", () => {
 
 //Mobile Modals
 const modal = document.querySelectorAll(".thumbnail");
+let targetModal;
+
+function openModal(modalName) {
+  if (targetModal) {
+    targetModal.classList.remove("active");
+  }
+  targetModal = document.querySelector("." + modalName);
+  targetModal.classList.add("active");
+}
 
 if (modal.length) {
-  let targetModal;
-  
   for (let i = 0; i < modal.length; i++) {
     modal[i].addEventListener("click", (event) => {
       if (document.documentElement.clientWidth <= 600) {
-        if (targetModal) {
-      targetModal.classList.remove("active");
-    }
-      targetModal = document.querySelector(
-        "." + event.currentTarget.dataset.modal,
-      );
-      targetModal.classList.add("active");
-  }});
+        openModal(event.currentTarget.dataset.modal);
+      }
+    });
   }
   const close = document.querySelectorAll(".closebutton");
   for (let i = 0; i < close.length; i++) {
@@ -224,6 +226,15 @@ if (modal.length) {
       targetModal.classList.remove("active");
     });
   }
+}
+
+//Desktop modal-open buttons revealed once the project graphic slides out
+const modalOpenButtons = document.querySelectorAll(".modalopenbutton");
+for (let i = 0; i < modalOpenButtons.length; i++) {
+  modalOpenButtons[i].addEventListener("click", (event) => {
+    event.stopPropagation();
+    openModal(event.currentTarget.dataset.modal);
+  });
 }
 
 

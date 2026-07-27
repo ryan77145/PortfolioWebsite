@@ -35,9 +35,6 @@ h2:not(.headerhome) {
   margin-bottom: 20px;
 }
 
-.marginbottom {
-  margin-bottom: 20px;
-}
 
 /* Toggle Nav*/
 .toggle-button {
@@ -398,48 +395,6 @@ textarea:focus::placeholder {
   font-size: 20px;
 }
 
-/* Projects Styling */
-
-iframe {
-  background-color: var(--text-color);
-  max-width: 100%;
-  height: 300px;
-  width: 500px;
-  margin-top: 50px;
-  grid-area: image;
-}
-
-.cardtext {
-  grid-area: text;
-}
-
-.projectcards {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 30px;
-}
-
-.appFeedbackForm,
-.playingCards,
-.bookInventory,
-.technicalDocument,
-.skyline {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "text image";
-  align-items: center;
-  gap: 50px;
-  max-width: 100%;
-}
-
-.tecdoc {
-  height: 500px;
-}
-
-.hint {
-  font-style: italic;
-}
-
 /* New Projects Page */
 .thumbnails {
   display: grid;
@@ -486,6 +441,15 @@ iframe {
 
 .githubview {
   text-align: center;
+}
+
+.modalopenbutton {
+  cursor: pointer;
+}
+
+.ilpmstext {
+  margin-top: 100px;
+  gap: 10px;
 }
 
 .projectbutton:hover {
@@ -815,11 +779,6 @@ footer {
 
   .home {
     font-size: 2rem;
-  }
-
-  .hometwo  {
-    font-size: large;
-    margin-left: 20px;
   }
 }
 

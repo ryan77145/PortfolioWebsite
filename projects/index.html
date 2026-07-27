@@ -269,67 +269,30 @@
               height="400"
             />
           </div>
-          <div class="thumbnail" data-modal="appfeedbackmodal">
-            <div class="projecttext">
-              <h3 class="projecttitle">Application Feedback Form</h3>
-              <p class="projectpara">
-                Multi-input feedback form built with semantic HTML. Includes
-                text fields, radio buttons, dropdowns, and a textarea —
-                structured for accessibility and clean markup.
-              </p>
-              <a class="projectbutton" href="/projects/survey-form/index.html"
-                >Live View</a
+          <div class="thumbnail" data-modal="ilpmsmodal">
+            <div class="projecttext ilpmstext">
+              <button
+                class="projectbutton modalopenbutton"
+                type="button"
+                data-modal="ilpmsmodal"
+              >
+                Learn More
+              </button>
+              <a class="projectbutton" href="https://github.com/ryan77145/lead_scanner"
+                >Github View</a
               >
             </div>
-            <img
-              class="projectgraphic mobileleft"
-              src="/Assets/AppFeedbackForm.webp"
-              alt="App Feedback Form Project Screenshot"
+            <video
+              class="projectgraphic"
               width="400"
               height="400"
-            />
-          </div>
-          <div class="thumbnail" data-modal="bookinventorymodal">
-            <div class="projecttext">
-              <h3 class="projecttitle">Book Inventory</h3>
-              <p class="projectpara">
-                Structured book tracking table built with semantic HTML.
-                Demonstrates multi-column table markup, categorization, and
-                clean data presentation with CSS styling.
-              </p>
-              <a
-                class="projectbutton"
-                href="/projects/book-inventory/index.html"
-                >Live View</a
-              >
-            </div>
-            <img
-              class="projectgraphic mobileright"
-              src="/Assets/BookInventory.webp"
-              alt="Book Inventory Project Screenshot"
-              width="400"
-              height="400"
-            />
-          </div>
-          <div class="thumbnail" data-modal="playingcardsmodal">
-            <div class="projecttext">
-              <h3 class="projecttitle">Playing Cards</h3>
-              <p class="projectpara">
-                Four-suit playing card layout built with CSS Flexbox.
-                Demonstrates card structure, alignment, and responsive spacing
-                using pure HTML and CSS.
-              </p>
-              <a class="projectbutton" href="/projects/playing-cards/index.html"
-                >Live View</a
-              >
-            </div>
-            <img
-              class="projectgraphic left"
-              src="/Assets/PlayingCards.webp"
-              alt="Playing Cards Project Screenshot"
-              width="400"
-              height="400"
-            />
+              autoplay
+              muted
+              loop
+            >
+              <source src="/Assets/IPLMSVideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
@@ -452,39 +415,24 @@
           >Live View</a
         >
       </div>
-      <div class="modal appfeedbackmodal">
+      <div class="modal ilpmsmodal">
         <p class="closebutton">X</p>
-        <h3>Application Feedback Form</h3>
+        <h3>Integrated Lead and Project Management System</h3>
         <p>
-          Multi-input feedback form built with semantic HTML. Includes text
-          fields, radio buttons, dropdowns, and a textarea — structured for
-          accessibility and clean markup.
+          Lead Scanner is a batch website-auditing tool that automates
+          prospecting: given a list of business URLs, it validates and dedupes
+          them (against Notion), runs each through a rules engine (SSL, meta
+          tags, CTAs, alt text, PageSpeed scores, etc.), and ranks them by
+          priority so weak websites surface as sales leads, reviewable in a
+          dashboard and pushed straight into Notion.
         </p>
-        <a class="modalbutton" href="/projects/survey-form/index.html"
-          >Live View</a
-        >
-      </div>
-      <div class="modal bookinventorymodal">
-        <p class="closebutton">X</p>
-        <h3>Book Inventory</h3>
         <p>
-          Structured book tracking table built with semantic HTML. Demonstrates
-          multi-column table markup, categorization, and clean data presentation
-          with CSS styling.
+          Stack: Node.js/Express, Playwright, Cheerio, Axios, Notion SDK on the
+          backend; Vite + React 19 frontend. Built with Claude Code as an
+          AI-integrated dev process — counted as part of the stack, used
+          deliberately for practice working with AI during the build.
         </p>
-        <a class="modalbutton" href="/projects/book-inventory/index.html"
-          >Live View</a
-        >
-      </div>
-      <div class="modal playingcardsmodal">
-        <p class="closebutton">X</p>
-        <h3>Playing Cards</h3>
-        <p>
-          Four-suit playing card layout built with CSS Flexbox. Demonstrates
-          card structure, alignment, and responsive spacing using pure HTML and
-          CSS.
-        </p>
-        <a class="modalbutton" href="/projects/playing-cards/index.html"
+        <a class="modalbutton" href="https://github.com/ryan77145/lead_scanner"
           >Live View</a
         >
       </div>
